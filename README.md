@@ -3,7 +3,7 @@ This repository serves as a quickstart template for GDExtension development with
 
 ## Contents
 * Preconfigured source files for C++ development of the GDExtension ([src/](./src/))
-* An empty Godot project in [demo/](./demo), to test the GDExtension
+* An empty Godot project in [project/](./project), to test the GDExtension
 * godot-cpp as a submodule (`godot-cpp/`)
 * GitHub Issues template ([.github/ISSUE_TEMPLATE.yml](./.github/ISSUE_TEMPLATE.yml))
 * GitHub CI/CD workflows to publish your library packages when creating a release ([.github/workflows/builds.yml](./.github/workflows/builds.yml))
@@ -18,10 +18,10 @@ To get started with your new GDExtension, do the following:
 * clone your repository to your local computer
 * initialize the godot-cpp git submodule via `git submodule update --init`
 * change the name of the compiled library file inside the [SConstruct](./SConstruct) file by modifying the `libname` string.
-  * change the paths of the to be loaded library name inside the [demo/bin/example.gdextension](./demo/bin/example.gdextension) file, by replacing `EXTENSION-NAME` with the name you chose for `libname`.
-* change the `entry_symbol` string inside [demo/bin/example.gdextension](./demo/bin/example.gdextension) file.
+  * change the paths of the to be loaded library name inside the [project/bin/example.gdextension](./project/bin/example.gdextension) file, by replacing `EXTENSION-NAME` with the name you chose for `libname`.
+* change the `entry_symbol` string inside [project/bin/example.gdextension](./project/bin/example.gdextension) file.
   * rename the `example_library_init` function in [src/register_types.cpp](./src/register_types.cpp) to the same name you chose for `entry_symbol`.
-* change the name of the `demo/bin/example.gdextension` file
+* change the name of the `project/bin/example.gdextension` file
 
 Now, you can build the project with the following command:
 
@@ -29,7 +29,7 @@ Now, you can build the project with the following command:
 scons
 ```
 
-If the build command worked, you can test it with the [demo](./demo) project. Import it into Godot, open it, and launch the main scene. You should see it print the following line in the console:
+If the build command worked, you can test it with the [project](./project) project. Import it into Godot, open it, and launch the main scene. You should see it print the following line in the console:
 
 ```
 Type: 24
